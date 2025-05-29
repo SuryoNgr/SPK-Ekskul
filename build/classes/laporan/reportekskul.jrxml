@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="81b994cf-0d0c-4ed8-820d-f519d1c99985">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     tbl_ekskul.`id_ekskul` AS tbl_ekskul_id_ekskul,
+     tbl_ekskul.`nama_ekskul` AS tbl_ekskul_nama_ekskul,
+     tbl_ekskul.`jam` AS tbl_ekskul_jam,
+     tbl_ekskul.`hari` AS tbl_ekskul_hari
+FROM
+     `tbl_ekskul` tbl_ekskul]]>
+	</queryString>
+	<field name="tbl_ekskul_id_ekskul" class="java.lang.Integer"/>
+	<field name="tbl_ekskul_nama_ekskul" class="java.lang.String"/>
+	<field name="tbl_ekskul_jam" class="java.lang.String"/>
+	<field name="tbl_ekskul_hari" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="104" height="79" uuid="b52fe032-06e3-4601-a57b-3ee18aea28f2"/>
+				<imageExpression><![CDATA["../image/logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="116" y="31" width="428" height="31" uuid="4a23e1b6-6c55-4d1b-9cf5-66f576ea117a"/>
+				<text><![CDATA[Jl. Duren Tiga Raya No.12 7, RT.8/RW.1, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="0" width="192" height="75" uuid="e49bfd54-ff3d-44ea-9876-959d656b48a0"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[LAPORAN EKSKUL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="9" width="278" height="20" uuid="732cfeec-37b6-4e3c-b813-07d31d14fe87"/>
+				<text><![CDATA[Nama Ekskul]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="9" width="277" height="20" uuid="387c7060-cb97-4fe5-a53e-e9e89ee9898d"/>
+				<text><![CDATA[Jam Ekskul]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="9" width="100" height="20" uuid="0dc3ba1e-8bde-4bb5-b248-ef438e02b30b"/>
+				<text><![CDATA[Hari Ekskul]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="278" y="0" width="277" height="20" uuid="7caad02b-2294-4adc-b04b-44611e602e40"/>
+				<textFieldExpression><![CDATA[$F{tbl_ekskul_jam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="277" height="20" uuid="e131df8b-e289-423b-bed8-5e8b3bbacb3e"/>
+				<textFieldExpression><![CDATA[$F{tbl_ekskul_nama_ekskul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="100" height="20" uuid="c0a80f66-2723-4075-970e-bb1f8d099036"/>
+				<textFieldExpression><![CDATA[$F{tbl_ekskul_hari}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="32" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="8" splitType="Stretch"/>
+	</summary>
+</jasperReport>
