@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="150b9f1a-bcd5-4ced-8824-19a2aab330e3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     siswa.`nisn` AS siswa_nisn,
+     siswa.`nama` AS siswa_nama,
+     siswa.`kelamin` AS siswa_kelamin,
+     siswa.`tgl_lahir` AS siswa_tgl_lahir,
+     siswa.`kelas` AS siswa_kelas,
+     siswa.`no_tlp` AS siswa_no_tlp,
+     siswa.`alamat` AS siswa_alamat
+FROM
+     `siswa` siswa]]>
+	</queryString>
+	<field name="siswa_nisn" class="java.lang.String"/>
+	<field name="siswa_nama" class="java.lang.String"/>
+	<field name="siswa_kelamin" class="java.lang.String"/>
+	<field name="siswa_tgl_lahir" class="java.sql.Date"/>
+	<field name="siswa_kelas" class="java.lang.String"/>
+	<field name="siswa_no_tlp" class="java.lang.String"/>
+	<field name="siswa_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="104" height="79" uuid="d7cff56b-85e1-4580-b6ce-3c1412af72fc"/>
+				<imageExpression><![CDATA["../image/logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="116" y="0" width="192" height="75" uuid="136b0803-d6a7-4388-8f06-60799419985e"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[LAPORAN SISWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="31" width="428" height="31" uuid="ec651258-f484-4b17-9b72-77409b3183f8"/>
+				<text><![CDATA[Jl. Duren Tiga Raya No.12 7, RT.8/RW.1, Duren Tiga, Kec. Pancoran, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12760]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="10" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="35" width="82" height="20" uuid="b77f3a0a-7722-49fa-8e84-44273a2de6c2"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[siswa nisn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="35" width="77" height="20" uuid="7c6ea846-f034-4254-9823-dbd12f816b57"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[siswa nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="35" width="62" height="20" uuid="701d4db3-4b01-4402-9088-715cfb0eb069"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[siswa kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="221" y="35" width="75" height="20" uuid="a72fc0db-6a92-4e13-959b-57a66cf9d2d3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[siswa lgl lahir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="296" y="35" width="75" height="20" uuid="f63ac46d-343a-4720-a6db-d6fa6ee1005f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[siswa kelas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="35" width="100" height="20" uuid="391f795e-0e47-4d8d-82ae-9acc8e330258"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[siswa no tlp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="35" width="84" height="20" uuid="7ff5675b-2ecd-454c-8e53-cc4785e6478b"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[siswa alamat]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="4" y="66" width="78" height="20" uuid="097cd92d-32a0-4245-952d-08dd0ce7bcac"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_nisn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="66" width="77" height="20" uuid="1bb7f777-1167-464b-8139-4dc7e26026d3"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="159" y="66" width="62" height="20" uuid="ffbf04eb-8e48-4b22-bc29-c134715ac4a2"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="66" width="75" height="20" uuid="2e7ebf1e-4b9f-4a74-bdad-74ac56422afa"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_tgl_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="66" width="75" height="20" uuid="6021c031-2fe4-4b64-9a3a-57915bc8939c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="66" width="100" height="20" uuid="a4c814c3-9292-40b8-8db8-1c4220308818"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_no_tlp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="66" width="84" height="20" uuid="da480823-dff5-4a48-ba10-344a92045293"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{siswa_alamat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="282" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="14" splitType="Stretch"/>
+	</summary>
+</jasperReport>
